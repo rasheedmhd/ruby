@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+  <br/>
+  <%= button_to "Destroy this user", @user, method: :delete %>
+  <br/>
+  <hr/>
+  <h3> User First Post </h3>
+  <%# displaying models from instance variables %>
+  <%= render @first_post %>
+</div>
