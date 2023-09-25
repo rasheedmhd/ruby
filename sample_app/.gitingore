@@ -1,0 +1,3 @@
+
+# Ignore Database test files
+db/test.*
