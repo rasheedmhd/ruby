@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @high_score %>
+
+<div>
+  <%= link_to "Edit this high score", edit_high_score_path(@high_score) %> |
+  <%= link_to "Back to high scores", high_scores_path %>
+
+  <%= button_to "Destroy this high score", @high_score, method: :delete %>
+</div>

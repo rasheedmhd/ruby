@@ -1,0 +1,27 @@
+<%= form_with(model: high_score) do |form| %>
+  <% if high_score.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(high_score.errors.count, "error") %> prohibited this high_score from being saved:</h2>
+
+      <ul>
+        <% high_score.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :game, style: "display: block" %>
+    <%= form.text_field :game %>
+  </div>
+
+  <div>
+    <%= form.label :score, style: "display: block" %>
+    <%= form.number_field :score %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
