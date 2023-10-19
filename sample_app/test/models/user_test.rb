@@ -5,7 +5,12 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-      @user = User.new(name: "Example User", email: "user@example.com")
+      @user = User.new(
+          name: "Example User",
+          email: "user@example.com",
+          password: "happy25",
+          password_confirmation: "happy25",
+      )
       # Fails with the introduction of VALID_EMAIL_REGEX
       # @user2 = User.new(email: "Example User", name: "user2@example.com")
   end
@@ -53,6 +58,30 @@ class UserTest < ActiveSupport::TestCase
           @user.email = invalid_address
           assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
       end
+  end
+
+  test "email address should be unique" do
+      duplicate_user = @user.dup
+      # duplicate_user.email = @user.email.upcase
+      @user.save
+      assert_not duplicate_user.valid?
+  end
+
+  test "email addresses should be saved as lowercase" do
+      mixed_case_email = "Foo@XaXklE.cOm"
+      @user.email = mixed_case_email
+      @user.save
+      assert_equal mixed_case_email.downcase, @user.reload.email
+  end
+
+  test "password should be present (nonblank)" do
+      @user.password = @user.password_confirmation = " " * 6
+      assert_not @user.valid?
+  end
+
+  test "password should have a minimum length" do
+      @user.password = @user.password_confirmation = "a" * 5
+      assert_not @user.valid?
   end
 
 end
