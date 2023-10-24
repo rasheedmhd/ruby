@@ -17,6 +17,10 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+      # user = current_user
+      # user = NIL
+      # flash[:success] = "Successfully looged out"
+      # redirect_to root
   end
 
 end

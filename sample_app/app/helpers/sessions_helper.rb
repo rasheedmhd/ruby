@@ -14,4 +14,8 @@ module SessionsHelper
         !current_user.nil?
     end
 
+    # def log_out(user)
+    #     user = current_user
+    #     user = NIL
+    # end
 end
