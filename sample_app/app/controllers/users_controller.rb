@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       # @user = User.new(params[:user]) # incomplete
       @user = User.new(user_permitted_params)
       if @user.save
+          log_in @user
           flash[:success] = "Welcome to my Sample App"
           # handle successful save
           redirect_to @user
