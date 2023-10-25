@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       if user && user.authenticate(params[:session][:password])
         # log in the login and redirect to the user's show page
         log_in user
+        remember user
         flash[:success] = "You have successfully logged in"
         redirect_to user
       else
