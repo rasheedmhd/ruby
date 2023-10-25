@@ -48,8 +48,8 @@ class UsersController < ApplicationController
 
   def authorized_user
       @user = User.find(params[:id])
-      flash[:danger] = "Permission Denied"
-      redirect_to root_url unless @user == current_user
+      redirect_to root_url unless current_user?(@user)
+      # flash[:danger] = "Permission Denied"
   end
 
   private
