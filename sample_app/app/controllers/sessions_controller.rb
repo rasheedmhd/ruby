@@ -17,9 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-      # render html: "Hello"
       log_out
-      redirect_to signup_url #root_url
+      redirect_to root_url
   end
 
 end
