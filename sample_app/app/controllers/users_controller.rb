@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update, :show]
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :authorized_user, only: [:edit, :update]
 
   def new
       @user = User.new
@@ -43,6 +44,12 @@ class UsersController < ApplicationController
         flash[:danger] = "Please you must login first to visit this page"
         redirect_to login_url
     end
+  end
+
+  def authorized_user
+      @user = User.find(params[:id])
+      flash[:danger] = "Permission Denied"
+      redirect_to root_url unless @user == current_user
   end
 
   private
