@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]
-  before_action :authorized_user, only: [:edit, :update]
+  before_action :logged_in_user,    only: [:index, :edit, :update, :destroy]
+  before_action :authorized_user,   only: [:edit, :update]
+  before_action :only_admin,        only: :destroy
+
+  def index
+      @users = User.paginate(page: params[:page])
+  end
 
   def new
       @user = User.new
@@ -51,6 +56,12 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to root_url unless current_user?(@user)
       # flash[:danger] = "Permission Denied"
+  end
+
+  def destroy
+      User.find(params[:id]).destroy
+      flash[:success] = "User deleted"
+      redirect_to users_url
   end
 
   private
