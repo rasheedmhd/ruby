@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # delete "/logout", to: "sessions#destroy"
 
   resources :users
+  resources :account_activations, :only [:edit]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
