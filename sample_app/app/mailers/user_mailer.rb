@@ -6,8 +6,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.account_activation.subject
   #
   def account_activation(user)
-      @user = user #"Hi, Sending Emails in Rails"
-
+    @user = user #"Hi, Sending Emails in Rails"
     mail to: user.email, subject: "Account Activation" #"starletgh@gmail.com"
   end
 
@@ -18,7 +17,6 @@ class UserMailer < ApplicationMailer
   #
   def password_reset
     @greeting = "Hi, Please Reset your password here dummy"
-
     mail to: "starletgh@gmail.com"
   end
 end

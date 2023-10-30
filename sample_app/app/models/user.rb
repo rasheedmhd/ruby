@@ -22,15 +22,25 @@ class User < ApplicationRecord
         SecureRandom.urlsafe_base64
     end
 
-
     def remember
         self.remember_token = User.new_token
         update_attribute(:remember_digest, User.digest(remember_token))
     end
 
-    def authenticated?(remember_token)
-        return false if remember_digest.nil?
-        BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    def authenticated?(attribute, token)
+        digest = send("#{attribute}_digest")
+        return false if digest.nil?
+        BCrypt::Password.new(digest).is_password?(token)
+    end
+
+    def activate
+        # update_attribute(:activation, true)
+        # update_attribute(:activated_at, Time.zone.now)
+        update_columns(activated: true, activated_at: Time.zone.now)
+    end
+
+    def send_activation_mail
+        UserMailer.account_activation(user).deliver_now
     end
 
     def forget
@@ -43,8 +53,8 @@ class User < ApplicationRecord
         end
 
         def create_activation_digest
-            user.activation_token = User.new_token
-            user.activation_token = User.digest(activation_token)
+            self.activation_token = User.new_token
+            self.activation_token = User.digest(activation_token)
         end
 
 end
