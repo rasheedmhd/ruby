@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-    attr_accessor :remember_token, :activation_token
+    attr_accessor :remember_token, :activation_token, :password_reset_token
 
     before_save :downcase_email
     before_create :create_activation_digest
@@ -34,13 +34,28 @@ class User < ApplicationRecord
     end
 
     def activate
-        # update_attribute(:activation, true)
-        # update_attribute(:activated_at, Time.zone.now)
         update_columns(activated: true, activated_at: Time.zone.now)
     end
 
+    def create_password_reset_digest
+        # self.password_reset_token = User.new_token
+        # update_attribute(:reset_digest, User.digest(password_reset_token))
+        # update_attribute(:reset_sent_at, Time.zone.now)
+        # print "#{password_reset_token}"
+        self.password_reset_token = User.new_token
+        update_columns(
+            password_reset_digest: User.digest(password_reset_token),
+            password_reset_sent_at: Time.zone.now,
+        )
+    end
+
     def send_activation_mail
-        UserMailer.account_activation(user).deliver_now
+        UserMailer.account_activation(self).deliver_now
+    end
+
+    # Sends password reset email.
+    def send_password_reset_mail
+        UserMailer.password_reset(self).deliver_now
     end
 
     def forget

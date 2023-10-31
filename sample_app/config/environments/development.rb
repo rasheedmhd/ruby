@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   #
   # Previewing emails
-  host = "localhost:4444"
+  host = "localhost:1080"
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = {
       host: host,

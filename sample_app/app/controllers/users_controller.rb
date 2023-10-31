@@ -17,7 +17,6 @@ class UsersController < ApplicationController
   end
 
   def create
-      # @user = User.new(params[:user]) # incomplete
       @user = User.new(user_permitted_params)
       if @user.save
           # log_in @user
@@ -36,7 +35,6 @@ class UsersController < ApplicationController
   def update
       @user = User.find(params[:id])
       if @user.update(user_permitted_params)
-          # Handle successful update
           flash[:success] = "Profile updated successfully"
           redirect_to @user
       else
