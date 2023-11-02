@@ -1,19 +1,7 @@
 <%= form_with(model: @micropost, local: true) do |f| %>
-        <% if @micropost.errors.any? %>
-            <div id="error_explanation">
-                <div class="alert alert-danger">
-                    The form contains <%= pluralize(@micropost.errors.count, "error") %>.
-                </div>
-                <ul>
-                <% @micropost.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-                </ul>
-            </div>
-        <% end %>
-
-        <div class="field">
-            <%= f.text_area :content, placeholder: "What's on your mind?" %>
-        </div>
-    <%= f.submit "Post", class: "btn btn-primary" %>
+	<%= render 'shared/emfm' %>
+    <div class="field">
+      <%= f.text_area :content, placeholder: "What's on your mind?" %>
+    </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

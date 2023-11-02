@@ -1,13 +1,14 @@
 class StaticPagesController < ApplicationController
   def home
-      # render html: "StaticPages #HOME"
-      @micropost = current_user.microposts.build if logged_in?
+    return unless logged_in?
+
+    @micropost = current_user.microposts.build
+    @feed_items = current_user.feed.paginate(page: params[:page])
   end
 
   def help
-      # render html: "StaticPages #HELP"
+    # render html: "StaticPages #HELP"
   end
 
-  def about
-  end
+  def about; end
 end
