@@ -3,5 +3,8 @@
     <div class="field">
       <%= f.text_area :content, placeholder: "What's on your mind?" %>
     </div>
+    <span class="image">
+    	<%= f.file_field :image %>
+    </span>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
