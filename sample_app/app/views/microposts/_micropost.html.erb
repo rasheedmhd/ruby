@@ -5,9 +5,8 @@
     <%= image_tag micropost.image if micropost.image.attached? %>
     <span class="timestamp"> Posted <%= time_ago_in_words(micropost.created_at) %> ago. </span> |
     <% if current_user?(micropost.user) %>
-    	<%= button_to "delete", micropost, method: :delete, data: { confirm: "Are you sure?" } %>
+    	<%# <%= button_to "delete", micropost, method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "delete", micropost, data: { turbo: true, turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
     <% end %>
 </li>
 <br/>
-<!-- <hr>
-<br/> -->
