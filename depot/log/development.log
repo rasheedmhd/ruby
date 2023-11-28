@@ -1,0 +1,3058 @@
+Started GET "/" for ::1 at 2023-11-14 23:19:12 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Starlet/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Starlet/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 633)
+Completed 200 OK in 17ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 7354)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20231114234252)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "image_url" varchar, "price" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231114234252"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-11-14 23:50:59.251081"], ["updated_at", "2023-11-14 23:50:59.251081"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-14 23:53:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Starlet/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Starlet/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 487)
+Completed 200 OK in 23ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4230)
+
+
+Started GET "/products" for ::1 at 2023-11-14 23:53:42 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 31)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 263.8ms | Allocations: 137379)
+Completed 200 OK in 269ms (Views: 264.8ms | ActiveRecord: 0.5ms | Allocations: 139072)
+
+
+Started GET "/products/new" for ::1 at 2023-11-14 23:53:49 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 10.2ms | Allocations: 3496)
+  Rendered products/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3825)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10311)
+Completed 200 OK in 34ms (Views: 18.9ms | ActiveRecord: 0.8ms | Allocations: 15828)
+
+
+Started GET "/products" for ::1 at 2023-11-14 23:54:16 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 13)
+  Rendered products/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 882)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 7368)
+Completed 200 OK in 41ms (Views: 34.2ms | ActiveRecord: 0.9ms | Allocations: 7644)
+
+
+Started GET "/products/new" for ::1 at 2023-11-15 00:09:21 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 12.4ms | Allocations: 1425)
+  Rendered products/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1525)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 8030)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 8306)
+
+
+Started POST "/products" for ::1 at 2023-11-15 00:10:16 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Book Course", "description"=>"Perhaps it isn’t the prettiest interface, but it works, and we can show it to our\nclient for approval. She can play with the other links (showing details,\nediting existing products, and so on). We explain to her that this is only a\nfirst step—we know it’s rough, but we wanted to get her feedback early.\n(And four commands probably count as early in anyone’s book.)", "image_url"=>"image url", "price"=>"12"}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Book Course"], ["description", "Perhaps it isn’t the prettiest interface, but it works, and we can show it to our\nclient for approval. She can play with the other links (showing details,\nediting existing products, and so on). We explain to her that this is only a\nfirst step—we know it’s rough, but we wanted to get her feedback early.\n(And four commands probably count as early in anyone’s book.)"], ["image_url", "image url"], ["price", 12.0], ["created_at", "2023-11-15 00:10:16.197568"], ["updated_at", "2023-11-15 00:10:16.197568"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/products/1
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms | Allocations: 3846)
+
+
+Started GET "/products/1" for ::1 at 2023-11-15 00:10:16 +0000
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 333)
+  Rendered products/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1573)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 8075)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 10713)
+
+
+Started GET "/products" for ::1 at 2023-11-15 00:10:27 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [1 times] (Duration: 1.5ms | Allocations: 433)
+  Rendered products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 7878)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.3ms | Allocations: 8149)
+
+
+Started GET "/products/1/edit" for ::1 at 2023-11-15 00:10:34 +0000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 3.3ms | Allocations: 1551)
+  Rendered products/edit.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1869)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 8347)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.2ms | Allocations: 9167)
+
+
+Started GET "/products/1" for ::1 at 2023-11-15 00:10:38 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 7073)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 7824)
+
+
+Started GET "/products" for ::1 at 2023-11-15 00:10:41 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [1 times] (Duration: 0.3ms | Allocations: 126)
+  Rendered products/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1037)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 7522)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 7793)
+
+
+Started GET "/products/1" for ::1 at 2023-11-15 00:10:43 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered products/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 602)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7079)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.1ms | Allocations: 7830)
+
+
+Started GET "/products" for ::1 at 2023-11-15 00:10:47 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [1 times] (Duration: 0.2ms | Allocations: 126)
+  Rendered products/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1049)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7562)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 7834)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProduct Delete All (0.6ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Docker for Rails Developers"], ["description", "<p>\n      <em>Build, Ship, and Run Your Applications Everywhere</em> Docker does\n      for DevOps what Rails did for web development—it gives you a new set\n      of superpowers. Gone are “works on my machine” woes and lengthy setup\n      tasks, replaced instead by a simple, consistent, Docker-based\n      development environment that will have your team up and running in\n      seconds.  Gain hands-on, real-world experience with a tool that’s\n      rapidly becoming fundamental to software development. Go from zero all\n      the way to production as Docker transforms the massive leap of\n      deploying your app in the cloud into a baby step.\n      </p>"], ["image_url", "ridocker.jpg"], ["price", 19.95], ["created_at", "2023-11-15 00:26:05.303031"], ["updated_at", "2023-11-15 00:26:05.303031"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Design and Build Great Web APIs"], ["description", "<p>\n      <em>Robust, Reliable, and Resilient</em>\n      APIs are transforming the business world at an increasing pace. Gain\n      the essential skills needed to quickly design, build, and deploy\n      quality web APIs that are robust, reliable, and resilient. Go from\n      initial design through prototyping and implementation to deployment of\n      mission-critical APIs for your organization. Test, secure, and deploy\n      your API with confidence and avoid the “release into production”\n      panic. Tackle just about any API challenge with more than a dozen\n      open-source utilities and common programming patterns you can apply\n      right away.\n      </p>"], ["image_url", "maapis.jpg"], ["price", 24.95], ["created_at", "2023-11-15 00:26:05.305322"], ["updated_at", "2023-11-15 00:26:05.305322"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Modern CSS with Tailwind"], ["description", "<p>\n      <em>Flexible Styling Without the Fuss</em>\n      Tailwind CSS is an exciting new CSS framework that allows you to\n      design your site by composing simple utility classes to create complex\n      effects. With Tailwind, you can style your text, move your items on\n      the page, design complex page layouts, and adapt your design for\n      devices from a phone to a wide-screen monitor. With this book, you’ll\n      learn how to use the Tailwind for its flexibility and its consistency,\n      from the smallest detail of your typography to the entire design of\n      your site.\n      </p>"], ["image_url", "tailwind.jpg"], ["price", 18.95], ["created_at", "2023-11-15 00:26:05.306614"], ["updated_at", "2023-11-15 00:26:05.306614"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products" for ::1 at 2023-11-15 00:32:55 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 66.5ms | Allocations: 62010)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 68823)
+Completed 200 OK in 91ms (Views: 74.9ms | ActiveRecord: 1.7ms | Allocations: 69675)
+
+
+Started GET "/products/new" for ::1 at 2023-11-15 00:33:24 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.9ms | Allocations: 1880)
+  Rendered products/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2188)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 8757)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 9089)
+
+
+Started GET "/products" for ::1 at 2023-11-15 00:33:30 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3756)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 10150)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.3ms | Allocations: 10421)
+
+
+Started GET "/products/new" for ::1 at 2023-11-15 01:06:51 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.9ms | Allocations: 1545)
+  Rendered products/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1660)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 21413)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 2.9ms | Allocations: 24271)
+
+
+Started POST "/products" for ::1 at 2023-11-15 01:06:52 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 5.7ms | Allocations: 3978)
+  Rendered products/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4078)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 10633)
+Completed 422 Unprocessable Entity in 23ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 11869)
+
+
+Started GET "/products/new" for ::1 at 2023-11-15 01:07:00 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.2ms | Allocations: 1557)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1672)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 21442)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 0.7ms | Allocations: 24594)
+
+
+Started POST "/products" for ::1 at 2023-11-15 01:07:01 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (1.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["image_url", ""], ["price", nil], ["created_at", "2023-11-15 01:07:01.872039"], ["updated_at", "2023-11-15 01:07:01.872039"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/products/5
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms | Allocations: 2440)
+
+
+Started GET "/products/5" for ::1 at 2023-11-15 01:07:01 +0000
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.9ms | Allocations: 303)
+  Rendered products/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1322)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7857)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 9416)
+
+
+Started GET "/products" for ::1 at 2023-11-15 01:07:05 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4067)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 10461)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms | Allocations: 10734)
+
+
+Started GET "/products/5/edit" for ::1 at 2023-11-15 01:07:08 +0000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.1ms | Allocations: 1516)
+  Rendered products/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1835)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8401)
+Completed 200 OK in 27ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 9208)
+
+
+Started PATCH "/products/5" for ::1 at 2023-11-15 01:07:12 +0000
+Processing by ProductsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Update Product", "id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+Redirected to http://[::1]:3000/products/5
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1196)
+
+
+Started GET "/products/5" for ::1 at 2023-11-15 01:07:12 +0000
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered products/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 609)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 7159)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 7915)
+
+
+Started DELETE "/products/5" for ::1 at 2023-11-15 01:07:13 +0000
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:52:in `destroy'
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/products_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/products
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms | Allocations: 2537)
+
+
+Started GET "/products" for ::1 at 2023-11-15 01:07:13 +0000
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3809)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 10204)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 10478)
+
+
+Started GET "/products/new" for ::1 at 2023-11-15 01:07:15 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.1ms | Allocations: 1413)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1513)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 8056)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 8331)
+
+
+Started POST "/products" for ::1 at 2023-11-15 01:07:22 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.9ms | Allocations: 3942)
+  Rendered products/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4057)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 23835)
+Completed 422 Unprocessable Entity in 25ms (Views: 19.6ms | ActiveRecord: 0.5ms | Allocations: 27960)
+
+
+Started POST "/products" for ::1 at 2023-11-15 01:09:17 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 3.0ms | Allocations: 4823)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 4938)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 24517)
+Completed 422 Unprocessable Entity in 24ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 29178)
+
+
+Started POST "/products" for ::1 at 2023-11-15 01:09:29 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>"0."}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.8ms | Allocations: 4675)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 4775)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 11310)
+Completed 422 Unprocessable Entity in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 12809)
+
+
+Started POST "/products" for ::1 at 2023-11-15 01:09:33 +0000
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>"0.9"}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 12.8ms | Allocations: 3835)
+  Rendered products/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 3935)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 10498)
+Completed 422 Unprocessable Entity in 26ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 11616)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 13:06:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Starlet/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Starlet/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 488)
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 4245)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-11-15 13:06:15 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 42680)
+  Rendered layout layouts/application.html.erb (Duration: 82.1ms | Allocations: 62886)
+Completed 200 OK in 91ms (Views: 82.9ms | ActiveRecord: 0.7ms | Allocations: 64852)
+
+
+Started GET "/store_Index" for 127.0.0.1 at 2023-11-15 13:11:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/store_Index"):
+  
+Started GET "/store_index" for 127.0.0.1 at 2023-11-15 13:12:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/store_index"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-15 13:12:05 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Rendered store/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 20498)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 21187)
+
+
+Started GET "/store_index" for 127.0.0.1 at 2023-11-15 13:12:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/store_index"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-15 13:13:01 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Rendered store/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7076)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 7334)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 13:16:29 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Rendered store/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1576)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 1664)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 2472)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: Your Pragmatic Catalog
+    10: </h1>
+    11: <ul>
+    12: <% @products.each do |product| %>
+    13: <li class='flex mb-6'>
+    14: <%= image_tag(product.image_url,
+    15: class: 'object-contain w-40 h-48 shadow mr-6') %>
+  
+app/views/store/index.html.erb:12
+Started GET "/" for 127.0.0.1 at 2023-11-15 13:16:59 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4926)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 25015)
+Completed 200 OK in 37ms (Views: 26.6ms | ActiveRecord: 3.0ms | Allocations: 26811)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:45:15 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 3442)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 10696)
+Completed 200 OK in 54ms (Views: 39.9ms | ActiveRecord: 3.1ms | Allocations: 11651)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:45:23 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3411)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 10811)
+Completed 200 OK in 60ms (Views: 43.8ms | ActiveRecord: 0.3ms | Allocations: 11657)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:45:25 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3079)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 10104)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 10392)
+
+
+Started GET "/questions" for 127.0.0.1 at 2023-11-15 14:45:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/questions"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:45:28 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3107)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 10222)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 10511)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-11-15 14:45:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/news"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:45:30 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3102)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 10217)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 10501)
+
+
+Started GET "/contact" for 127.0.0.1 at 2023-11-15 14:45:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:45:32 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3108)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 10223)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 10507)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:54:20 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 3460)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 10685)
+Completed 200 OK in 43ms (Views: 33.9ms | ActiveRecord: 4.2ms | Allocations: 11637)
+
+
+Started GET "/contact" for 127.0.0.1 at 2023-11-15 14:54:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-15 14:55:01 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3108)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 10223)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 10508)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 15:03:48 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 3106)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 9990)
+Completed 200 OK in 40ms (Views: 27.2ms | ActiveRecord: 8.4ms | Allocations: 10390)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 15:05:35 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3407)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5972)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms | Allocations: 6794)
+
+
+  
+ActionView::Template::Error (The asset "kharla-font.css" is not present in the asset pipeline.
+):
+     5:   <meta name="viewport" content="width=device-width,initial-scale=1">
+     6:   <%= csrf_meta_tags %>
+     7:   <%= csp_meta_tag %>
+     8:   <%= stylesheet_link_tag "kharla-font", "data-turbo-track": "reload" %>
+     9:   <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    10:   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:   <%= javascript_importmap_tags %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2023-11-15 15:05:54 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3419)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 5973)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms | Allocations: 6787)
+
+
+  
+ActionView::Template::Error (The asset "outfit-font.css" is not present in the asset pipeline.
+):
+     5:   <meta name="viewport" content="width=device-width,initial-scale=1">
+     6:   <%= csrf_meta_tags %>
+     7:   <%= csp_meta_tag %>
+     8:   <%= stylesheet_link_tag "outfit-font", "data-turbo-track": "reload" %>
+     9:   <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    10:   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:   <%= javascript_importmap_tags %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2023-11-15 15:06:10 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3419)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 10866)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.3ms | Allocations: 11703)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-15 15:11:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 43579)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 64301)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 0.5ms | Allocations: 69697)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:27:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 105.3ms | Allocations: 51994)
+  Rendered layout layouts/application.html.erb (Duration: 119.5ms | Allocations: 72609)
+Completed 200 OK in 144ms (Views: 121.3ms | ActiveRecord: 2.9ms | Allocations: 78001)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:27:35 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3282)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 10225)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.3ms | Allocations: 10522)
+
+
+Started GET "/questions" for ::1 at 2023-11-27 10:27:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/questions"):
+  
+Started GET "/" for ::1 at 2023-11-27 10:27:38 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3292)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 10401)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 10695)
+
+
+Started GET "/news" for ::1 at 2023-11-27 10:27:39 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/news"):
+  
+Started GET "/" for ::1 at 2023-11-27 10:27:40 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3289)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 10397)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 10683)
+
+
+Started GET "/contact" for ::1 at 2023-11-27 10:27:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/" for ::1 at 2023-11-27 10:27:42 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3274)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10385)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms | Allocations: 10671)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:27:50 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 3251)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 10361)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.2ms | Allocations: 10649)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:27:52 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3253)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 10196)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms | Allocations: 10483)
+
+
+Started GET "/products/new" for ::1 at 2023-11-27 10:27:58 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 7.1ms | Allocations: 2799)
+  Rendered products/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3134)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 10249)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 11003)
+
+
+Started GET "/products" for ::1 at 2023-11-27 10:28:04 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4321)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 11205)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.3ms | Allocations: 11559)
+
+
+Started GET "/products/2" for ::1 at 2023-11-27 10:28:12 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 1.0ms | Allocations: 327)
+  Rendered products/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1435)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 8460)
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 11100)
+
+
+Started GET "/products" for ::1 at 2023-11-27 10:28:16 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3760)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 10644)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 10915)
+
+
+Started GET "/products/new" for ::1 at 2023-11-27 10:28:21 +0000
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.7ms | Allocations: 1463)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1563)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 8819)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 9095)
+
+
+Started GET "/products" for ::1 at 2023-11-27 10:28:24 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3806)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 10749)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 1.1ms | Allocations: 11024)
+
+
+Started GET "/store_index" for ::1 at 2023-11-27 10:46:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/store_index"):
+  
+Started GET "/" for ::1 at 2023-11-27 10:46:10 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3325)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 10433)
+Completed 200 OK in 38ms (Views: 28.1ms | ActiveRecord: 3.2ms | Allocations: 10857)
+
+
+Started GET "/products" for ::1 at 2023-11-27 10:46:24 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 3822)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 10706)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.4ms | Allocations: 10974)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:50:57 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.9ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 5545)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 12767)
+Completed 200 OK in 58ms (Views: 51.8ms | ActiveRecord: 2.9ms | Allocations: 13603)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:54:30 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 5532)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 12755)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.7ms | Allocations: 13592)
+
+
+Started GET "/cart" for ::1 at 2023-11-27 11:01:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20231127105936_create_carts.rb
+
+
+):
+  
+activerecord (7.0.8) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.8) lib/active_record/migration.rb:634:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/carts" for ::1 at 2023-11-27 11:01:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20231127105936_create_carts.rb
+
+
+):
+  
+activerecord (7.0.8) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.8) lib/active_record/migration.rb:632:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-11-27 11:35:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20231127105936_create_carts.rb
+20231127111916_create_line_items.rb
+
+
+):
+  
+activerecord (7.0.8) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.8) lib/active_record/migration.rb:632:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-11-27 11:45:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20231127105936_create_carts.rb
+20231127111916_create_line_items.rb
+
+
+):
+  
+activerecord (7.0.8) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.8) lib/active_record/migration.rb:632:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2023-11-27 11:45:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCarts (20231127105936)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231127105936"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLineItems (20231127111916)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "line_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer NOT NULL, "cart_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_11e15d5c6b"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_af645e8e5f"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_line_items_on_product_id" ON "line_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_line_items_on_cart_id" ON "line_items" ("cart_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231127111916"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-27 11:45:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Rendered store/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1532)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 4528)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="w-full">
+
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+      <%= notice %>
+    </p>
+  <% end %>
+
+  <h1 class="font-bold text-xl mb-6 pb-2 border-b-2"> Your Pragmatic Catalog </h1>
+
+  <!--<ul>
+    <% @products.each do |product| %>
+    <li class='flex mb-6'> <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+    <div>
+      <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+      <p>
+      <%= sanitize(product.description) %>
+      </p>
+    <div class="mt-3">
+    <%= number_to_currency(product.price) %>
+    </div>
+    </div>
+    </li>
+    <% end %>
+  </ul>-->
+
+  <ul>
+    <% cache @products do %>
+      <% @products.each do |product| %>
+        <% cache product do %>
+        <li class='flex mb-6'>
+          <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+          <div>
+            <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+            <p>
+            <%= sanitize(product.description) %>
+            </p>
+            <div class="mt-3">
+            <%= number_to_currency(product.price) %>
+            </div>
+            <%= button_to 'Add to Cart', line_items_path :product, form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
+          </div>
+        </li>
+        <% end %>
+      <% end %>
+    <% end %>
+  </ul>
+
+</div>
+form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' 
+):
+1:    <div class="w-full">
+2:    
+3:      <% if notice.present? %>
+4:        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+5:          <%= notice %>
+6:        </p>
+7:      <% end %>
+8:    
+9:      <h1 class="font-bold text-xl mb-6 pb-2 border-b-2"> Your Pragmatic Catalog </h1>
+10:    
+11:      <!--<ul>
+12:        <% @products.each do |product| %>
+13:        <li class='flex mb-6'> <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+14:        <div>
+15:          <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+16:          <p>
+17:          <%= sanitize(product.description) %>
+18:          </p>
+19:        <div class="mt-3">
+20:        <%= number_to_currency(product.price) %>
+21:        </div>
+22:        </div>
+23:        </li>
+24:        <% end %>
+25:      </ul>-->
+26:    
+27:      <ul>
+28:        <% cache @products do %>
+29:          <% @products.each do |product| %>
+30:            <% cache product do %>
+31:            <li class='flex mb-6'>
+32:              <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+33:              <div>
+34:                <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+35:                <p>
+36:                <%= sanitize(product.description) %>
+37:                </p>
+38:                <div class="mt-3">
+39:                <%= number_to_currency(product.price) %>
+40:                </div>
+41:                <%= button_to 'Add to Cart', line_items_path :product, form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
+42:              </div>
+43:            </li>
+44:            <% end %>
+45:          <% end %>
+46:        <% end %>
+47:      </ul>
+48:    
+49:    </div>
+50:    form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' 
+  
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/" for ::1 at 2023-11-27 11:45:42 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Rendered store/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1412)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1500)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1762)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="w-full">
+
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+      <%= notice %>
+    </p>
+  <% end %>
+
+  <h1 class="font-bold text-xl mb-6 pb-2 border-b-2"> Your Pragmatic Catalog </h1>
+
+  <!--<ul>
+    <% @products.each do |product| %>
+    <li class='flex mb-6'> <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+    <div>
+      <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+      <p>
+      <%= sanitize(product.description) %>
+      </p>
+    <div class="mt-3">
+    <%= number_to_currency(product.price) %>
+    </div>
+    </div>
+    </li>
+    <% end %>
+  </ul>-->
+
+  <ul>
+    <% cache @products do %>
+      <% @products.each do |product| %>
+        <% cache product do %>
+        <li class='flex mb-6'>
+          <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+          <div>
+            <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+            <p>
+            <%= sanitize(product.description) %>
+            </p>
+            <div class="mt-3">
+            <%= number_to_currency(product.price) %>
+            </div>
+            <%= button_to 'Add to Cart', line_items_path :product, form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
+          </div>
+        </li>
+        <% end %>
+      <% end %>
+    <% end %>
+  </ul>
+
+</div>
+form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' 
+):
+1:    <div class="w-full">
+2:    
+3:      <% if notice.present? %>
+4:        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+5:          <%= notice %>
+6:        </p>
+7:      <% end %>
+8:    
+9:      <h1 class="font-bold text-xl mb-6 pb-2 border-b-2"> Your Pragmatic Catalog </h1>
+10:    
+11:      <!--<ul>
+12:        <% @products.each do |product| %>
+13:        <li class='flex mb-6'> <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+14:        <div>
+15:          <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+16:          <p>
+17:          <%= sanitize(product.description) %>
+18:          </p>
+19:        <div class="mt-3">
+20:        <%= number_to_currency(product.price) %>
+21:        </div>
+22:        </div>
+23:        </li>
+24:        <% end %>
+25:      </ul>-->
+26:    
+27:      <ul>
+28:        <% cache @products do %>
+29:          <% @products.each do |product| %>
+30:            <% cache product do %>
+31:            <li class='flex mb-6'>
+32:              <%= image_tag(product.image_url, class: 'object-contain w-40 h-48 shadow mr-6') %>
+33:              <div>
+34:                <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
+35:                <p>
+36:                <%= sanitize(product.description) %>
+37:                </p>
+38:                <div class="mt-3">
+39:                <%= number_to_currency(product.price) %>
+40:                </div>
+41:                <%= button_to 'Add to Cart', line_items_path :product, form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
+42:              </div>
+43:            </li>
+44:            <% end %>
+45:          <% end %>
+46:        <% end %>
+47:      </ul>
+48:    
+49:    </div>
+50:    form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' 
+  
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/views/store/index.html.erb:41: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/" for ::1 at 2023-11-27 11:46:04 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 37.2ms | Allocations: 7987)
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 29769)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.9ms | Allocations: 30617)
+
+
+Started GET "/" for ::1 at 2023-11-27 11:46:18 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 6181)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 13397)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.3ms | Allocations: 14236)
+
+
+Started POST "/line_items.product" for ::1 at 2023-11-27 11:46:20 +0000
+  
+SyntaxError (/Users/Starlet/projects/RoR/depot/app/controllers/concerns/current_cart.rb:12: syntax error, unexpected `end'):
+  
+app/controllers/concerns/current_cart.rb:12: syntax error, unexpected `end'
+app/controllers/concerns/current_cart.rb:12: syntax error, unexpected `end'
+app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+app/controllers/line_items_controller.rb:1:in `<main>'
+Started POST "/line_items.product" for ::1 at 2023-11-27 11:46:47 +0000
+  
+SyntaxError (/Users/Starlet/projects/RoR/depot/app/controllers/concerns/current_cart.rb:11: syntax error, unexpected `end'
+        end
+        ^~~
+):
+  
+app/controllers/concerns/current_cart.rb:11: syntax error, unexpected `end'
+app/controllers/concerns/current_cart.rb:11: syntax error, unexpected `end'
+app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+app/controllers/line_items_controller.rb:1:in `<main>'
+Started POST "/line_items.product" for ::1 at 2023-11-27 11:48:21 +0000
+  
+SyntaxError (/Users/Starlet/projects/RoR/depot/app/controllers/concerns/current_cart.rb:13: syntax error, unexpected `end'):
+  
+app/controllers/concerns/current_cart.rb:13: syntax error, unexpected `end'
+app/controllers/concerns/current_cart.rb:13: syntax error, unexpected `end'
+app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+app/controllers/line_items_controller.rb:1:in `<main>'
+Started POST "/line_items.product" for ::1 at 2023-11-27 11:48:35 +0000
+Processing by LineItemsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 2372)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product without an ID):
+  
+app/controllers/line_items_controller.rb:25:in `create'
+Started POST "/line_items.product" for ::1 at 2023-11-27 12:56:47 +0000
+Processing by LineItemsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 23ms (ActiveRecord: 2.1ms | Allocations: 2088)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product without an ID):
+  
+app/controllers/line_items_controller.rb:25:in `create'
+Started POST "/line_items.product" for ::1 at 2023-11-27 12:57:12 +0000
+Processing by LineItemsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 5ms (ActiveRecord: 1.1ms | Allocations: 2324)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product without an ID):
+  
+app/controllers/line_items_controller.rb:25:in `create'
+Started POST "/line_items.product" for ::1 at 2023-11-27 12:57:34 +0000
+Processing by LineItemsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms | Allocations: 2271)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product without an ID):
+  
+app/controllers/line_items_controller.rb:25:in `create'
+Started POST "/line_items.product" for ::1 at 2023-11-27 12:58:24 +0000
+Processing by LineItemsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 729)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product without an ID):
+  
+app/controllers/line_items_controller.rb:25:in `create'
+Started GET "/" for ::1 at 2023-11-27 12:59:25 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 7802)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 28471)
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 1.6ms | Allocations: 29726)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 12:59:26 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:25:in `create'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1689)
+
+
+  
+NoMethodError (undefined method `line_items' for nil:NilClass):
+  
+app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-27 13:01:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 64.7ms | Allocations: 54528)
+  Rendered layout layouts/application.html.erb (Duration: 73.1ms | Allocations: 75052)
+Completed 200 OK in 84ms (Views: 74.0ms | ActiveRecord: 1.3ms | Allocations: 81609)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 13:01:23 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:25:in `create'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3061)
+
+
+  
+NoMethodError (undefined method `line_items' for nil:NilClass):
+  
+app/controllers/line_items_controller.rb:26:in `create'
+Started POST "/line_items?product_id=2" for ::1 at 2023-11-27 13:01:32 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:25:in `create'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1188)
+
+
+  
+NoMethodError (undefined method `line_items' for nil:NilClass):
+  
+app/controllers/line_items_controller.rb:26:in `create'
+Started GET "/" for ::1 at 2023-11-27 13:04:22 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 7515)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 27850)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 1.4ms | Allocations: 30045)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 13:04:24 +0000
+  
+SyntaxError (/Users/Starlet/projects/RoR/depot/app/controllers/concerns/current_cart.rb:13: syntax error, unexpected `end'):
+  
+app/controllers/concerns/current_cart.rb:13: syntax error, unexpected `end'
+app/controllers/concerns/current_cart.rb:13: syntax error, unexpected `end'
+app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+app/controllers/line_items_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2023-11-27 13:05:00 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 7518)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 27904)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 1.0ms | Allocations: 30076)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 13:05:02 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"3"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:25:in `create'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.5ms | Allocations: 1790)
+
+
+  
+NoMethodError (undefined method `line_items' for nil:NilClass):
+  
+app/controllers/line_items_controller.rb:26:in `create'
+Started GET "/" for ::1 at 2023-11-27 13:07:55 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 7504)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 27840)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.9ms | Allocations: 30010)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 13:07:57 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"3"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mCart Create (1.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 13:07:57.047531"], ["updated_at", "2023-11-27 13:07:57.047531"]]
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 3], ["cart_id", 1], ["created_at", "2023-11-27 13:07:57.081268"], ["updated_at", "2023-11-27 13:07:57.081268"]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/1
+Completed 302 Found in 45ms (ActiveRecord: 3.4ms | Allocations: 19753)
+
+
+Started GET "/carts/1" for ::1 at 2023-11-27 13:07:57 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 2.8ms | Allocations: 3425)
+  Rendered carts/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4671)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 11850)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 13729)
+
+
+Started GET "/" for ::1 at 2023-11-27 13:08:01 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5640)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 12524)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 12812)
+
+
+Started GET "/questions" for ::1 at 2023-11-27 13:08:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/questions"):
+  
+Started GET "/" for ::1 at 2023-11-27 13:08:03 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 5653)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 12761)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 13047)
+
+
+Started GET "/contact" for ::1 at 2023-11-27 13:08:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/" for ::1 at 2023-11-27 13:08:09 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5677)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 12787)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms | Allocations: 13074)
+
+
+Started GET "/cart" for ::1 at 2023-11-27 13:08:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/cart"):
+  
+Started GET "/carts" for ::1 at 2023-11-27 13:08:27 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 8.6ms | Allocations: 1821)
+  Rendered carts/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3043)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 10308)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.5ms | Allocations: 10661)
+
+
+Started GET "/carts/new" for ::1 at 2023-11-27 13:08:38 +0000
+Processing by CartsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/new.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 3.9ms | Allocations: 1032)
+  Rendered carts/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1342)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 8467)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 8796)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 13:08:41 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 4.2ms | Allocations: 1522)
+  Rendered carts/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2465)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 9522)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.4ms | Allocations: 9793)
+
+
+Started GET "/carts/1" for ::1 at 2023-11-27 13:08:43 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 3.0ms | Allocations: 1407)
+  Rendered carts/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2003)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 9028)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.4ms | Allocations: 9777)
+
+
+Started GET "/carts/1/edit" for ::1 at 2023-11-27 13:08:54 +0000
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 3.7ms | Allocations: 648)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 7991)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.2ms | Allocations: 8796)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 13:08:57 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 4.9ms | Allocations: 1522)
+  Rendered carts/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2459)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 9492)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.5ms | Allocations: 9763)
+
+
+Started GET "/carts/1/edit" for ::1 at 2023-11-27 13:09:00 +0000
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 0.8ms | Allocations: 624)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 8027)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms | Allocations: 8777)
+
+
+Started PATCH "/carts/1" for ::1 at 2023-11-27 13:09:03 +0000
+Processing by CartsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Update Cart", "id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+Redirected to http://[::1]:3000/carts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1181)
+
+
+Started GET "/carts/1" for ::1 at 2023-11-27 13:09:03 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 2.1ms | Allocations: 1407)
+  Rendered carts/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2003)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 9144)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 9898)
+
+
+Started GET "/carts/1/edit" for ::1 at 2023-11-27 13:09:06 +0000
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 2.0ms | Allocations: 615)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7787)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 8535)
+
+
+Started GET "/carts/1" for ::1 at 2023-11-27 13:09:06 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 3.5ms | Allocations: 1407)
+  Rendered carts/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1994)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 9019)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.5ms | Allocations: 9768)
+
+
+Started DELETE "/carts/1" for ::1 at 2023-11-27 13:09:09 +0000
+Processing by CartsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mCart Destroy (0.1ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/carts
+Completed 302 Found in 14ms (ActiveRecord: 2.8ms | Allocations: 4341)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 13:09:09 +0000
+Processing by CartsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 24)
+  Rendered carts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 917)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 7950)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 8224)
+
+
+Started GET "/carts/new" for ::1 at 2023-11-27 13:09:12 +0000
+Processing by CartsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/new.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 1.4ms | Allocations: 576)
+  Rendered carts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 7940)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 8213)
+
+
+Started POST "/carts" for ::1 at 2023-11-27 13:09:14 +0000
+Processing by CartsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Cart"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+  [1m[36mCart Create (0.5ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 13:09:14.687540"], ["updated_at", "2023-11-27 13:09:14.687540"]]
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/carts/2
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 2311)
+
+
+Started GET "/carts/2" for ::1 at 2023-11-27 13:09:14 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 1.0ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 8458)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 9210)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 13:09:19 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 1.6ms | Allocations: 806)
+  Rendered carts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1728)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 8761)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 9032)
+
+
+Started GET "/carts/new" for ::1 at 2023-11-27 13:09:21 +0000
+Processing by CartsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/new.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 2.5ms | Allocations: 570)
+  Rendered carts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 7703)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 7974)
+
+
+Started POST "/carts" for ::1 at 2023-11-27 13:09:22 +0000
+Processing by CartsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Cart"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+  [1m[36mCart Create (0.7ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 13:09:22.336901"], ["updated_at", "2023-11-27 13:09:22.336901"]]
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/carts/3
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms | Allocations: 2291)
+
+
+Started GET "/carts/3" for ::1 at 2023-11-27 13:09:22 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 1.0ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1301)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 8326)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 9078)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 13:09:25 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (4.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered collection of carts/_cart.html.erb [2 times] (Duration: 7.5ms | Allocations: 1600)
+  Rendered carts/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2544)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 9808)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 4.7ms | Allocations: 10080)
+
+
+Started GET "/carts/new" for ::1 at 2023-11-27 13:09:27 +0000
+Processing by CartsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/new.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 3.3ms | Allocations: 564)
+  Rendered carts/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 664)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 7806)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 8079)
+
+
+Started POST "/carts" for ::1 at 2023-11-27 13:09:28 +0000
+Processing by CartsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Cart"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+  [1m[36mCart Create (0.8ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 13:09:28.641928"], ["updated_at", "2023-11-27 13:09:28.641928"]]
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/carts/4
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms | Allocations: 2320)
+
+
+Started GET "/carts/4" for ::1 at 2023-11-27 13:09:28 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 4]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 1.1ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8377)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 9128)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 13:09:31 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 4]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered collection of carts/_cart.html.erb [3 times] (Duration: 4.9ms | Allocations: 2394)
+  Rendered carts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3350)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 10383)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.6ms | Allocations: 10655)
+
+
+Started GET "/carts/2/edit" for ::1 at 2023-11-27 13:09:35 +0000
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 1.0ms | Allocations: 627)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 774)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 7799)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 8548)
+
+
+Started GET "/carts/4/edit" for ::1 at 2023-11-27 14:02:56 +0000
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 13.5ms | Allocations: 939)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1334)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 8772)
+Completed 200 OK in 115ms (Views: 90.5ms | ActiveRecord: 4.0ms | Allocations: 10211)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 14:02:58 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 4]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered collection of carts/_cart.html.erb [3 times] (Duration: 4.0ms | Allocations: 2694)
+  Rendered carts/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3981)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 11200)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.7ms | Allocations: 11553)
+
+
+Started GET "/carts/4" for ::1 at 2023-11-27 14:02:59 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 4]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 3.9ms | Allocations: 965)
+  Rendered carts/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1821)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8846)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.3ms | Allocations: 9676)
+
+
+Started DELETE "/carts/4" for ::1 at 2023-11-27 14:03:01 +0000
+Processing by CartsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 4]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mCart Destroy (1.5ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/carts
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms | Allocations: 3366)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 14:03:01 +0000
+Processing by CartsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered collection of carts/_cart.html.erb [2 times] (Duration: 2.5ms | Allocations: 1600)
+  Rendered carts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2608)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 9641)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 9959)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddQuantityToLineItems (20231127140549)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "line_items" ADD "quantity" integer DEFAULT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231127140549"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-27 17:14:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 7832)
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 29596)
+Completed 200 OK in 69ms (Views: 62.6ms | ActiveRecord: 0.7ms | Allocations: 31787)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:14:59 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 5624)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 12508)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 12794)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 17:15:01 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"3"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mCart Create (1.0ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 17:15:01.980255"], ["updated_at", "2023-11-27 17:15:01.980255"]]
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.7ms | Allocations: 6601)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/cart.rb:4:in `add_product'
+app/controllers/line_items_controller.rb:27:in `create'
+Started GET "/carts" for ::1 at 2023-11-27 17:15:25 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered collection of carts/_cart.html.erb [3 times] (Duration: 26.4ms | Allocations: 5380)
+  Rendered carts/index.html.erb within layouts/application (Duration: 32.8ms | Allocations: 6724)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 14085)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 1.1ms | Allocations: 14816)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:15:27 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 5680)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 12564)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 12852)
+
+
+Started POST "/line_items?product_id=2" for ::1 at 2023-11-27 17:15:30 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mCart Create (0.3ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 17:15:30.997615"], ["updated_at", "2023-11-27 17:15:30.997615"]]
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.5ms | Allocations: 3750)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/cart.rb:4:in `add_product'
+app/controllers/line_items_controller.rb:27:in `create'
+Started GET "/" for ::1 at 2023-11-27 17:17:54 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 7498)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 27833)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.9ms | Allocations: 29996)
+
+
+Started POST "/line_items?product_id=3" for ::1 at 2023-11-27 17:17:58 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mCart Create (0.4ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-27 17:17:58.037701"], ["updated_at", "2023-11-27 17:17:58.037701"]]
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 7], ["product_id", 3], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:5:in `add_product'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 3], ["cart_id", 7], ["created_at", "2023-11-27 17:17:58.055040"], ["updated_at", "2023-11-27 17:17:58.055040"], ["quantity", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 36ms (ActiveRecord: 4.0ms | Allocations: 16777)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:17:58 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 2.2ms | Allocations: 2617)
+  Rendered carts/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3651)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 10988)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 12189)
+
+
+Started GET "/carts/" for ::1 at 2023-11-27 17:18:04 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [5 times] (Duration: 7.3ms | Allocations: 4713)
+  Rendered carts/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5754)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 12787)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.9ms | Allocations: 13058)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:18:09 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 4.7ms | Allocations: 1411)
+  Rendered carts/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2016)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 9042)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 9790)
+
+
+Started GET "/carts/6" for ::1 at 2023-11-27 17:18:18 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 2.9ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1293)
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 8328)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 0.4ms | Allocations: 9077)
+
+
+Started GET "/carts/2" for ::1 at 2023-11-27 17:18:23 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 1.4ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1284)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 8323)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 9071)
+
+
+Started DELETE "/carts/2" for ::1 at 2023-11-27 17:18:25 +0000
+Processing by CartsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mCart Destroy (0.3ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/carts
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 3431)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 17:18:25 +0000
+Processing by CartsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [4 times] (Duration: 5.4ms | Allocations: 3908)
+  Rendered carts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4913)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 11951)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 12226)
+
+
+Started GET "/carts/3" for ::1 at 2023-11-27 17:18:26 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 2.3ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8313)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.4ms | Allocations: 9061)
+
+
+Started DELETE "/carts/3" for ::1 at 2023-11-27 17:18:27 +0000
+Processing by CartsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mCart Destroy (0.4ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/carts
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 3368)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 17:18:27 +0000
+Processing by CartsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [3 times] (Duration: 5.6ms | Allocations: 3114)
+  Rendered carts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4094)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 11127)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.3ms | Allocations: 11401)
+
+
+Started GET "/carts/5" for ::1 at 2023-11-27 17:18:28 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 5.5ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 8328)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.5ms | Allocations: 9076)
+
+
+Started DELETE "/carts/5" for ::1 at 2023-11-27 17:18:30 +0000
+Processing by CartsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mCart Destroy (0.7ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/carts
+Completed 302 Found in 10ms (ActiveRecord: 2.3ms | Allocations: 3375)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 17:18:30 +0000
+Processing by CartsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [2 times] (Duration: 2.5ms | Allocations: 2320)
+  Rendered carts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3279)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 10547)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 10822)
+
+
+Started GET "/carts/6" for ::1 at 2023-11-27 17:18:35 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCart Load (1.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/views/carts/_cart.html.erb:6
+  Rendered carts/_cart.html.erb (Duration: 2.6ms | Allocations: 700)
+  Rendered carts/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1296)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8402)
+Completed 200 OK in 31ms (Views: 18.2ms | ActiveRecord: 1.5ms | Allocations: 9151)
+
+
+Started DELETE "/carts/6" for ::1 at 2023-11-27 17:18:36 +0000
+Processing by CartsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 6]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mCart Destroy (0.8ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:52:in `destroy'
+Redirected to http://[::1]:3000/carts
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms | Allocations: 3360)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 17:18:36 +0000
+Processing by CartsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 2.4ms | Allocations: 1526)
+  Rendered carts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2484)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 9518)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.8ms | Allocations: 9792)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:18:38 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 5654)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 12538)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 12826)
+
+
+Started POST "/line_items?product_id=2" for ::1 at 2023-11-27 17:18:40 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 7], ["product_id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:5:in `add_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Create (0.7ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["cart_id", 7], ["created_at", "2023-11-27 17:18:40.316303"], ["updated_at", "2023-11-27 17:18:40.316303"], ["quantity", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 15ms (ActiveRecord: 2.1ms | Allocations: 5056)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:18:40 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 3.4ms | Allocations: 2125)
+  Rendered carts/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 10002)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 10754)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:18:48 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 5669)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 12777)
+Completed 200 OK in 36ms (Views: 28.6ms | ActiveRecord: 0.3ms | Allocations: 13065)
+
+
+Started POST "/line_items?product_id=2" for ::1 at 2023-11-27 17:18:50 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 7], ["product_id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:5:in `add_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Update (0.4ms)[0m  [1m[33mUPDATE "line_items" SET "updated_at" = ?, "quantity" = ? WHERE "line_items"."id" = ?[0m  [["updated_at", "2023-11-27 17:18:50.847274"], ["quantity", 2], ["id", 3]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms | Allocations: 5095)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:18:50 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 9.2ms | Allocations: 2125)
+  Rendered carts/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2760)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 9786)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms | Allocations: 10537)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:18:53 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 5641)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 12525)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 12812)
+
+
+Started POST "/line_items?product_id=4" for ::1 at 2023-11-27 17:18:55 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"4"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 7], ["product_id", 4], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:5:in `add_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Create (0.6ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 4], ["cart_id", 7], ["created_at", "2023-11-27 17:18:55.451892"], ["updated_at", "2023-11-27 17:18:55.451892"], ["quantity", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms | Allocations: 5068)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:18:55 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 4.3ms | Allocations: 2839)
+  Rendered carts/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3458)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 10484)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 11236)
+
+
+Started GET "/carts/7/edit" for ::1 at 2023-11-27 17:18:58 +0000
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  Rendered carts/_form.html.erb (Duration: 1.9ms | Allocations: 937)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 8572)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.1ms | Allocations: 9376)
+
+
+Started PATCH "/carts/7" for ::1 at 2023-11-27 17:19:01 +0000
+Processing by CartsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Update Cart", "id"=>"7"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1105)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:19:01 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 4.5ms | Allocations: 2839)
+  Rendered carts/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3461)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 10569)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms | Allocations: 11323)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 17:19:03 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 6.6ms | Allocations: 2972)
+  Rendered carts/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3912)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 10946)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.6ms | Allocations: 11218)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:26:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20231127172336_combine_items_in_cart.rb
+
+
+):
+  
+activerecord (7.0.8) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.8) lib/active_record/migration.rb:634:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CombineItemsInCart (20231127172336)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231127172336"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-27 17:28:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 7509)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 27844)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 1.2ms | Allocations: 29891)
+
+
+Started POST "/line_items?product_id=2" for ::1 at 2023-11-27 17:28:56 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 7], ["product_id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:5:in `add_product'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Update (0.4ms)[0m  [1m[33mUPDATE "line_items" SET "updated_at" = ?, "quantity" = ? WHERE "line_items"."id" = ?[0m  [["updated_at", "2023-11-27 17:28:56.395340"], ["quantity", 3], ["id", 3]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 28ms (ActiveRecord: 2.6ms | Allocations: 13100)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:28:56 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 3.6ms | Allocations: 3757)
+  Rendered carts/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4481)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 11587)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 12654)
+
+
+Started GET "/" for ::1 at 2023-11-27 17:29:02 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 5637)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 12745)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.3ms | Allocations: 13033)
+
+
+Started POST "/line_items?product_id=2" for ::1 at 2023-11-27 17:29:04 +0000
+Processing by LineItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:26:in `create'
+  [1m[36mLineItem Load (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 7], ["product_id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:5:in `add_product'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mLineItem Update (0.3ms)[0m  [1m[33mUPDATE "line_items" SET "updated_at" = ?, "quantity" = ? WHERE "line_items"."id" = ?[0m  [["updated_at", "2023-11-27 17:29:04.878454"], ["quantity", 4], ["id", 3]]
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/line_items_controller.rb:31:in `block in create'
+Redirected to http://[::1]:3000/carts/7
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms | Allocations: 5008)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:29:04 +0000
+Processing by CartsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 3.1ms | Allocations: 2839)
+  Rendered carts/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3449)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 10671)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 11422)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:31:38 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:8
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:8
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:8
+  Rendered carts/_cart.html.erb (Duration: 7.7ms | Allocations: 3122)
+  Rendered carts/show.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4075)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 11466)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.6ms | Allocations: 12795)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 17:31:58 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 6.2ms | Allocations: 3128)
+  Rendered carts/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4099)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 11489)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 0.6ms | Allocations: 12815)
+
+
+Started GET "/carts/w" for ::1 at 2023-11-27 18:49:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (Need a handler. Pass the with: keyword argument or provide a block.):
+  
+app/controllers/carts_controller.rb:3:in `<class:CartsController>'
+app/controllers/carts_controller.rb:1:in `<main>'
+Started GET "/carts/w" for ::1 at 2023-11-27 18:50:21 +0000
+  
+NoMethodError (undefined method `RecordNotFound' for ActiveRecord:Module):
+  
+app/controllers/carts_controller.rb:3:in `<class:CartsController>'
+app/controllers/carts_controller.rb:1:in `<main>'
+Started GET "/carts/w" for ::1 at 2023-11-27 18:50:22 +0000
+  
+NoMethodError (undefined method `RecordNotFound' for ActiveRecord:Module):
+  
+app/controllers/carts_controller.rb:3:in `<class:CartsController>'
+app/controllers/carts_controller.rb:1:in `<main>'
+Started GET "/carts/w" for ::1 at 2023-11-27 18:51:05 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"w"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:64:in `set_cart'
+
+Redirected to http://[::1]:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms | Allocations: 6506)
+
+
+Started GET "/" for ::1 at 2023-11-27 18:51:06 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 68.2ms | Allocations: 53859)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 74346)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 1.0ms | Allocations: 76836)
+
+
+Started GET "/carts" for ::1 at 2023-11-27 18:51:13 +0000
+Processing by CartsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (1.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ app/views/carts/index.html.erb:12
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered collection of carts/_cart.html.erb [1 times] (Duration: 30.4ms | Allocations: 13014)
+  Rendered carts/index.html.erb within layouts/application (Duration: 50.7ms | Allocations: 15114)
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 22345)
+Completed 200 OK in 72ms (Views: 61.8ms | ActiveRecord: 2.4ms | Allocations: 23007)
+
+
+Started GET "/carts/7" for ::1 at 2023-11-27 18:51:18 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:64:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 7]]
+  ↳ app/views/carts/_cart.html.erb:6
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/carts/_cart.html.erb:7
+  Rendered carts/_cart.html.erb (Duration: 6.4ms | Allocations: 3121)
+  Rendered carts/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4148)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 11242)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.4ms | Allocations: 12075)
+
+
+Started GET "/carts/1" for ::1 at 2023-11-27 18:51:21 +0000
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:64:in `set_cart'
+
+Redirected to http://[::1]:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 969)
+
+
+Started GET "/" for ::1 at 2023-11-27 18:51:21 +0000
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:12
+  Rendered store/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 5654)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 12539)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms | Allocations: 12826)
+
+
